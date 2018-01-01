@@ -11,6 +11,7 @@ namespace UI_Layer
     {
         public MainWindow()
         {
+            //Start-up procedure
             InitializeComponent();
             mainWindow.Navigate(new ChooseFunctionality());
 
