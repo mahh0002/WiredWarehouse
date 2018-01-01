@@ -1,0 +1,26 @@
+﻿<Page x:Class="UI_Layer.AddCategory"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UI_Layer"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="625"
+      Title="AddCategory">
+
+    <Grid>
+        <Label Name="Label_AddNewCategory" Content="Add new category" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="22" HorizontalContentAlignment="Center" Width="259"/>
+        <Label Name="TextBox_NameOfCategory" Content="Name" HorizontalAlignment="Left" FontSize="16" Margin="40,73,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="TextBox_NewCategoryName" HorizontalAlignment="Left" Height="23" Margin="92,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Name="Button_AddCategory" Content="Add category" HorizontalAlignment="Left" Margin="92,123,0,0" FontWeight="Bold" FontSize="16" VerticalAlignment="Top" Width="120" Height="31" Click="Button_AddCategory_Click"/>
+        <Label Name="TextBox_DeleteCategory" Content="Delete category" HorizontalAlignment="Left" Margin="356,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="22" HorizontalContentAlignment="Center" Width="235"/>
+        <ListView x:Name="listView_Categories" HorizontalAlignment="Left" Height="174" Margin="386,73,0,0" VerticalAlignment="Top" Width="182" MouseDoubleClick="ListView_Categories_MouseDoubleClick">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Category names" Width="170" DisplayMemberBinding="{Binding categoryTitle}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Name="Button_Back" Content="Go back" HorizontalAlignment="Left" Margin="25,361,0,0" VerticalAlignment="Top" Width="136" Height="42" FontSize="22" FontWeight="Bold" Click="Button_Back_Click" />
+    </Grid>
+</Page>

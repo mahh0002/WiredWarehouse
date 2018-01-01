@@ -1,0 +1,17 @@
+﻿<Page x:Class="UI_Layer.ChooseFunctionality"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UI_Layer"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="ChooseFunctionality" Height="450" Width="725">
+
+    <Grid RenderTransformOrigin="0.354,0.561">
+        <Label Name="Label_SystemTitle"  Content="Wired Warehouse" HorizontalAlignment="Center" Margin="0,24,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+        <Label Name="Label_Choose" Content="Choose functionality" HorizontalAlignment="Center" Margin="0,87,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" HorizontalContentAlignment="Center"/>
+        <Button Name="Button_Counting" Content="Counting" HorizontalAlignment="Center" Margin="0,151,0,0" VerticalAlignment="Top" Width="254" FontSize="24" FontWeight="Bold" Height="47" Click="Button_Count_Click" />
+        <Button Name="Button_Overview" Content="Stock overview" HorizontalAlignment="Center" Margin="0,203,0,0" VerticalAlignment="Top" Width="254" FontSize="24" FontWeight="Bold" Height="47" Click="Button_Overview_Click" />
+    </Grid>
+</Page>

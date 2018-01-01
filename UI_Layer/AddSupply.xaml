@@ -1,0 +1,28 @@
+﻿<Page x:Class="UI_Layer.AddSupply"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UI_Layer"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="625"
+      Title="AddSupply">
+
+    <Grid>
+        <Label Name="Label_AddNewStock" Content="Add new stock" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="22" HorizontalContentAlignment="Center" Width="605"/>
+        <Label Name="Label_Name" Content="Name" HorizontalAlignment="Left" Width="90" FontSize="16" Margin="201,97,0,0" VerticalAlignment="Top"/>
+        <Label Name="Label_Description" Content="Description" HorizontalAlignment="Left" Width="90" FontSize="16" Margin="201,125,0,0" VerticalAlignment="Top"/>
+        <Label Name="Label_Amount" Content="Amount" HorizontalAlignment="Left" Width="90" FontSize="16" Margin="201,153,0,0" VerticalAlignment="Top"/>
+        <Label Name="Label_Unit" Content="Unit" HorizontalAlignment="Left" Width="90" FontSize="16" Margin="201,181,0,0" VerticalAlignment="Top"/>
+        <Label Name="Label_Building" Content="Building" HorizontalAlignment="Left" Width="90" FontSize="16" Margin="201,209,0,0" VerticalAlignment="Top"/>
+        <Label Name="Label_Category" Content="Category" HorizontalAlignment="Left" Width="90" FontSize="16" Margin="201,238,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox_Name" HorizontalAlignment="Left" Height="23" Margin="296,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_Description" HorizontalAlignment="Left" Height="23" Margin="296,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_Amount" HorizontalAlignment="Left" Height="23" Margin="296,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_Unit" HorizontalAlignment="Left" Height="23" Margin="296,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_Building" HorizontalAlignment="Left" Height="23" Margin="296,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="comboBox_Category" HorizontalAlignment="Left" Margin="296,242,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Name="Button_Back" Content="Go back" HorizontalAlignment="Left" Margin="56,349,0,0" VerticalAlignment="Top" Width="136" Height="42" FontSize="22" FontWeight="Bold" Click="Button_Back_Click"/>
+        <Button Name="Button_AddStock" Content="Add stock" HorizontalAlignment="Left" Margin="348,349,0,0" FontSize="22" VerticalAlignment="Top" Width="219" Height="42" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Button_AddStock_Click"/>
+    </Grid>
+</Page>

@@ -1,0 +1,55 @@
+﻿<Page x:Class="UI_Layer.Overview"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UI_Layer"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="725"
+      Title="Overview">
+
+    <Grid>
+        <Label Name="Label_Title" Content="Stock overview" HorizontalAlignment="Center" Margin="239,10,230,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="22" HorizontalContentAlignment="Center" Width="170"/>
+        <ListView x:Name="listView_Overview" HorizontalAlignment="Center" Height="295" Margin="0,61,0,0" VerticalAlignment="Top" Width="673" MouseDoubleClick="ListView_Overview_DoubleClick" HorizontalContentAlignment="Center">
+            <ListView.Resources>
+                <Style TargetType="{x:Type GridViewColumnHeader}">
+                    <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                </Style>
+            </ListView.Resources>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" Width="30" DisplayMemberBinding="{Binding supplyID}"/>
+                    <GridViewColumn Header="Name" Width="170" DisplayMemberBinding="{Binding supplyName}"/>
+                    <GridViewColumn Header="Description" Width="150" DisplayMemberBinding="{Binding supplyDescription}"/>
+                    <GridViewColumn Header="Amount" Width="80" DisplayMemberBinding="{Binding supplyAmount}"/>
+                    <GridViewColumn Header="Unit" Width="80" DisplayMemberBinding="{Binding supplyUnit}"/>
+                    <GridViewColumn Header="Building" Width="95" DisplayMemberBinding="{Binding building}"/>
+                </GridView>
+            </ListView.View>
+            <ListView.GroupStyle>
+                <GroupStyle>
+                    <GroupStyle.ContainerStyle>
+                        <Style TargetType="{x:Type GroupItem}">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate>
+                                        <Expander IsExpanded="True">
+                                            <Expander.Header>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="{Binding Name}" FontWeight="Bold" Foreground="Gray" FontSize="14" VerticalAlignment="Bottom"/>
+                                                    <TextBlock Text="{Binding ItemCount}" FontSize="14" Foreground="Green" Margin="10,0,0,0" VerticalAlignment="Bottom"/>
+                                                </StackPanel>
+                                            </Expander.Header>
+                                            <ItemsPresenter />
+                                        </Expander>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </GroupStyle.ContainerStyle>
+                </GroupStyle>
+            </ListView.GroupStyle>
+        </ListView>
+        <Button Name="Button_Back" Content="Go back" HorizontalAlignment="Left" Margin="25,361,0,0" VerticalAlignment="Top" Width="136" Height="42" FontSize="22" FontWeight="Bold" Click="Button_Back_Click"/>
+    </Grid>
+</Page>
