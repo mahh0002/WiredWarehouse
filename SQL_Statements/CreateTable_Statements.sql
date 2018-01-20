@@ -1,0 +1,23 @@
+CREATE TABLE OFFICE_SUPPLIES (
+SupplyID int NOT NULL IDENTITY(1,1) PRIMARY KEY,
+SupplyName nvarchar(50) NOT NULL,
+SupplyDescription nvarchar(250) NOT NULL,
+SupplyAmount int NOT NULL,
+SupplyUnit nvarchar(30),
+Building nvarchar(30) NOT NULL,
+CategoryTitle nvarchar(30) NOT NULL FOREIGN KEY REFERENCES OFFICE_SUPPLIES_REPOSITORY(CategoryTitle)
+ON UPDATE CASCADE,
+);
+
+CREATE TABLE OFFICE_SUPPLIES_COUNT (
+CountID int NOT NULL IDENTITY(1,1) PRIMARY KEY,
+CountAmount int NOT NULL,
+CountMonth nvarchar(20) not null,
+CountYear nvarchar(10) not null,
+SupplyID int NOT NULL FOREIGN KEY REFERENCES OFFICE_SUPPLIES(SupplyID)
+ON UPDATE CASCADE,
+);
+
+CREATE TABLE OFFICE_SUPPLIES_REPOSITORY (
+CategoryTitle nvarchar(30) NOT NULL PRIMARY KEY
+);
