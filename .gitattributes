@@ -13,10 +13,9 @@
 #*.cs     diff=csharp
 
 ###############################################################################
-# Marking SQL and XAML as detectable
+# Marking SQL as detectable
 ###############################################################################
 *.sql linguist-detectable=true
-*.xaml linguist-detectable=true
 
 ###############################################################################
 # Set the merge driver for project and solution files
