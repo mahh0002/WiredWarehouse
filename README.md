@@ -1,6 +1,6 @@
 # Wired Warehouse
 
 Wired Warehouse is a storage management/maintenance system that was developed for a Danish organization.
-The project group consisted of four developers.
+The project group consisted of four developers and was developed with Windows Presentation Foundation.
 
-For complete documentation of the program, head over to the [Wiki](https://github.com/mnabe/wired_warehouse/wiki).
+
